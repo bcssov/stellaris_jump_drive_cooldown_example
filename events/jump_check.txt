@@ -18,13 +18,13 @@ ship_event = {
 			}
 			remove_ship_flag = custom_jump_drive_cooldown
 			remove_modifier = jump_drive_cooldown
-			else = {
-				set_timed_ship_flag = { flag = custom_jump_drive_cooldown  days = @jump_check_cooldown }
-				add_modifier = {
-					modifier = jump_drive_cooldown
-					days = @jump_check_cooldown
-				}
+
+			set_timed_ship_flag = { flag = custom_jump_drive_cooldown  days = @jump_check_cooldown }
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = @jump_check_cooldown
 			}
+
 		}
 		else_if = {
 			limit = {
@@ -34,13 +34,13 @@ ship_event = {
 			}
 			remove_ship_flag = custom_jump_drive_cooldown
 			remove_modifier = jump_drive_cooldown
-			else = {
-				set_timed_ship_flag = { flag = custom_jump_drive_cooldown  days = @jump_psi_check_cooldown }
-				add_modifier = {
-					modifier = jump_drive_cooldown
-					days = @jump_psi_check_cooldown
-				}
+
+			set_timed_ship_flag = { flag = custom_jump_drive_cooldown  days = @jump_psi_check_cooldown }
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = @jump_psi_check_cooldown
 			}
+
 		}
 	}
 }
