@@ -1,0 +1,10 @@
+can_jump_drive = {
+	custom_tooltip = {
+		any_owned_ship = {
+			NOT = {
+                # Use the following cooldown flag to prevent fleets from jupming like in older versions
+				has_ship_flag = custom_jump_drive_cooldown
+			}
+		}
+	}
+}

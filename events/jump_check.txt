@@ -1,0 +1,46 @@
+namespace = jump_check
+
+@jump_check_cooldown = 200
+@jump_psi_check_cooldown = 160
+
+ship_event = {
+	# Lots of reading through code to learn about this "scripting" language
+	id = jump_check.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_technology = tech_jump_drive_1
+				}
+			}
+			remove_ship_flag = custom_jump_drive_cooldown
+			remove_modifier = jump_drive_cooldown
+			else = {
+				set_timed_ship_flag = { flag = custom_jump_drive_cooldown  days = @jump_check_cooldown }
+				add_modifier = {
+					modifier = jump_drive_cooldown
+					days = @jump_check_cooldown
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_technology = tech_psi_jump_drive_1
+				}
+			}
+			remove_ship_flag = custom_jump_drive_cooldown
+			remove_modifier = jump_drive_cooldown
+			else = {
+				set_timed_ship_flag = { flag = custom_jump_drive_cooldown  days = @jump_psi_check_cooldown }
+				add_modifier = {
+					modifier = jump_drive_cooldown
+					days = @jump_psi_check_cooldown
+				}
+			}
+		}
+	}
+}

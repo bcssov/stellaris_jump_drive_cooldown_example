@@ -1,0 +1,3 @@
+NGameplay = {
+	JUMP_DRIVE_COOLDOWN = 0 # This was most likely moved here due to the odd Paradox's scripting language limitations. Anyway set the hardcoded value to 0 and use a custom scripted flag.    
+}
